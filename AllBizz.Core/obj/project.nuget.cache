@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0UiAjKkYmurBa4gOFN3sOe5/UxB4+siq408BAHxDpxh6HK2ZKSG3ahQ74dvnP0nk/lFlLgMyelBzt/637IiWow==",
+  "dgSpecHash": "bNcPh4joC65AGwQQkCB99XG+L1FJ9h5Td1BsRXNfeqaaMgjJ8QEg7ZoZW0Ws+7Lqp2ncAQNSuquoAH2q9yfUaA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mehemmed\\Desktop\\Exam Pre\\AllBizz\\AllBizz.Core\\AllBizz.Core.csproj",
+  "projectFilePath": "C:\\Users\\Mehemmed\\Desktop\\API\\AllBizz\\AllBizz.Core\\AllBizz.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mehemmed\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Mehemmed\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

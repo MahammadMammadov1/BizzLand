@@ -26,6 +26,12 @@ builder.Services.AddScoped<ISliderService,SliderService>();
 builder.Services.AddScoped<IServicesService, ServicesService>();
 builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
 
+builder.Services.AddScoped<IProfessionRepository, ProfessionRepository>();
+builder.Services.AddScoped<IProfessionService ,ProfessionService>();
+
+
+builder.Services.AddScoped<IMemberRepository, MemberRepository>();
+builder.Services.AddScoped<IMemberService, MemberService>();
 
 builder.Services.AddAutoMapper(typeof(MapProfile).Assembly);
 

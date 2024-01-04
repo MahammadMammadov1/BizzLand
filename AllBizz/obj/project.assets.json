@@ -2933,11 +2933,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mehemmed\\Desktop\\Exam Pre\\AllBizz\\AllBizz\\AllBizz.csproj",
+      "projectUniqueName": "C:\\Users\\Mehemmed\\Desktop\\API\\AllBizz\\AllBizz\\AllBizz.csproj",
       "projectName": "AllBizz",
-      "projectPath": "C:\\Users\\Mehemmed\\Desktop\\Exam Pre\\AllBizz\\AllBizz\\AllBizz.csproj",
+      "projectPath": "C:\\Users\\Mehemmed\\Desktop\\API\\AllBizz\\AllBizz\\AllBizz.csproj",
       "packagesPath": "C:\\Users\\Mehemmed\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mehemmed\\Desktop\\Exam Pre\\AllBizz\\AllBizz\\obj\\",
+      "outputPath": "C:\\Users\\Mehemmed\\Desktop\\API\\AllBizz\\AllBizz\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mehemmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2954,8 +2954,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Mehemmed\\Desktop\\Exam Pre\\AllBizz\\AllBizz.Business\\AllBizz.Business.csproj": {
-              "projectPath": "C:\\Users\\Mehemmed\\Desktop\\Exam Pre\\AllBizz\\AllBizz.Business\\AllBizz.Business.csproj"
+            "C:\\Users\\Mehemmed\\Desktop\\API\\AllBizz\\AllBizz.Business\\AllBizz.Business.csproj": {
+              "projectPath": "C:\\Users\\Mehemmed\\Desktop\\API\\AllBizz\\AllBizz.Business\\AllBizz.Business.csproj"
             }
           }
         }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "b1ghlSIcXms0ZEPnMcX4dE/0buw3gx6kbNfoYeS2nB4=",
+  "Hash": "Uj5s++ADaHl8S0W1NICca+dE/8EZGzjA6AzwGxl+pRo=",
   "Source": "AllBizz",
   "BasePath": "_content/AllBizz",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "AllBizz\\wwwroot",
       "Source": "AllBizz",
-      "ContentRoot": "C:\\Users\\Mehemmed\\Desktop\\Exam Pre\\AllBizz\\AllBizz\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mehemmed\\Desktop\\API\\AllBizz\\AllBizz\\wwwroot\\",
       "BasePath": "_content/AllBizz",
       "Pattern": "**"
     }

@@ -5,6 +5,7 @@ using AllBizz.Core.Entities;
 using AllBizz.Core.Repository.Interfaces;
 using AllBizz.Data.DAL;
 using AutoMapper;
+using AutoMapper.Execution;
 using Microsoft.AspNetCore.Hosting;
 using System;
 using System.Collections.Generic;
@@ -57,6 +58,14 @@ namespace AllBizz.Business.Service.Implementations
             Slider slider =await _sliderRepository.GetByIdAsync(x=>x.Id == id);
             if (slider != null)
             {
+
+                if (!string.IsNullOrEmpty(slider.ImageUrl))
+                {
+                    if (System.IO.File.Exists(slider.ImageUrl))
+                    {
+                        System.IO.File.Delete(slider.ImageUrl);
+                    }
+                }
                 _sliderRepository.Delete(slider);
                 await _sliderRepository.CommitAsync();
             }

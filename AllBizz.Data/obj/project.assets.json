@@ -2460,11 +2460,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mehemmed\\Desktop\\Exam Pre\\AllBizz\\AllBizz.Data\\AllBizz.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Mehemmed\\Desktop\\API\\AllBizz\\AllBizz.Data\\AllBizz.Data.csproj",
       "projectName": "AllBizz.Data",
-      "projectPath": "C:\\Users\\Mehemmed\\Desktop\\Exam Pre\\AllBizz\\AllBizz.Data\\AllBizz.Data.csproj",
+      "projectPath": "C:\\Users\\Mehemmed\\Desktop\\API\\AllBizz\\AllBizz.Data\\AllBizz.Data.csproj",
       "packagesPath": "C:\\Users\\Mehemmed\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mehemmed\\Desktop\\Exam Pre\\AllBizz\\AllBizz.Data\\obj\\",
+      "outputPath": "C:\\Users\\Mehemmed\\Desktop\\API\\AllBizz\\AllBizz.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mehemmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2481,8 +2481,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Mehemmed\\Desktop\\Exam Pre\\AllBizz\\AllBizz.Core\\AllBizz.Core.csproj": {
-              "projectPath": "C:\\Users\\Mehemmed\\Desktop\\Exam Pre\\AllBizz\\AllBizz.Core\\AllBizz.Core.csproj"
+            "C:\\Users\\Mehemmed\\Desktop\\API\\AllBizz\\AllBizz.Core\\AllBizz.Core.csproj": {
+              "projectPath": "C:\\Users\\Mehemmed\\Desktop\\API\\AllBizz\\AllBizz.Core\\AllBizz.Core.csproj"
             }
           }
         }

@@ -2264,11 +2264,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mehemmed\\Desktop\\Exam Pre\\AllBizz\\AllBizz.Core\\AllBizz.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Mehemmed\\Desktop\\API\\AllBizz\\AllBizz.Core\\AllBizz.Core.csproj",
       "projectName": "AllBizz.Core",
-      "projectPath": "C:\\Users\\Mehemmed\\Desktop\\Exam Pre\\AllBizz\\AllBizz.Core\\AllBizz.Core.csproj",
+      "projectPath": "C:\\Users\\Mehemmed\\Desktop\\API\\AllBizz\\AllBizz.Core\\AllBizz.Core.csproj",
       "packagesPath": "C:\\Users\\Mehemmed\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mehemmed\\Desktop\\Exam Pre\\AllBizz\\AllBizz.Core\\obj\\",
+      "outputPath": "C:\\Users\\Mehemmed\\Desktop\\API\\AllBizz\\AllBizz.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mehemmed\\AppData\\Roaming\\NuGet\\NuGet.Config",

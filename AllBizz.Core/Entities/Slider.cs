@@ -12,8 +12,8 @@ namespace AllBizz.Core.Entities
     {
         public string Title { get; set; }
         public string Desc { get; set; }
-        public string? ImageUrl { get; set; }
-        public string? VideoUrl { get; set; }
+        public string ImageUrl { get; set; }
+        public string VideoUrl { get; set; }
         public string ButtonText { get; set; }
         
     }

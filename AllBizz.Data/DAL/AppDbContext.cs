@@ -19,6 +19,10 @@ namespace AllBizz.Data.DAL
         }
 
         public DbSet<Slider> Sliders { get; set; }
+        public DbSet<Services> Services { get; set; }
+        public DbSet<Member> Members { get; set; }
+        public DbSet<Profession> Professions { get; set; }
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

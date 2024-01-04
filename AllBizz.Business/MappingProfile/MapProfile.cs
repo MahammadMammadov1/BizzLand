@@ -1,4 +1,6 @@
-﻿using AllBizz.Business.DTOs.ServiceDtos;
+﻿using AllBizz.Business.DTOs.MemberDtos;
+using AllBizz.Business.DTOs.ProfessionDtos;
+using AllBizz.Business.DTOs.ServiceDtos;
 using AllBizz.Business.DTOs.SliderDtos;
 using AllBizz.Core.Entities;
 using AutoMapper;
@@ -22,6 +24,13 @@ namespace AllBizz.Business.MappingProfile
             CreateMap<Services, ServiceCreateDto>().ReverseMap();
             CreateMap<Services, ServiceUpdateDto>().ReverseMap();
 
+            CreateMap<MemberCreateDto, Member>().ReverseMap();
+            CreateMap<MemberUpdateDto, Member>().ReverseMap();
+            CreateMap<MemberGetDto, Member>().ReverseMap();
+
+            CreateMap<ProfessionCreateDto, Profession>().ReverseMap();
+            CreateMap<ProfessionGetDto, Profession>().ReverseMap();
+            CreateMap<ProfessionUpdateDto, Profession>().ReverseMap();
 
         }
 
