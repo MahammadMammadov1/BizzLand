@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace AllBizz.Data.Configurations
 {
-    public class ServiceConfiguration : IEntityTypeConfiguration<Service>
+    public class ServiceConfiguration : IEntityTypeConfiguration<Services>
     {
-        void IEntityTypeConfiguration<Service>.Configure(EntityTypeBuilder<Service> builder)
+        void IEntityTypeConfiguration<Services>.Configure(EntityTypeBuilder<Services> builder)
         {
             builder.Property(x => x.LogoUrl).IsRequired().HasMaxLength(100);
             builder.Property(x => x.Title).IsRequired().HasMaxLength(50);

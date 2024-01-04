@@ -13,6 +13,7 @@ namespace AllBizz.Business.Service.Interfaces
         Task Create(SliderCreateDto dto);
         Task Update(SliderUpdateDto dto);
         Task Delete(int id);
+        Task SoftDelete(int id);
         Task<SliderGetDto> GetByIdAsync(int id);
         Task<List<SliderGetDto>> GetAllAsync();
 

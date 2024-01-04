@@ -1,4 +1,5 @@
-﻿using AllBizz.Business.DTOs.SliderDtos;
+﻿using AllBizz.Business.DTOs.ServiceDtos;
+using AllBizz.Business.DTOs.SliderDtos;
 using AllBizz.Core.Entities;
 using AutoMapper;
 using System;
@@ -16,6 +17,12 @@ namespace AllBizz.Business.MappingProfile
             CreateMap<Slider, SliderGetDto>().ReverseMap();
             CreateMap<Slider, SliderCreateDto>().ReverseMap();
             CreateMap<Slider, SliderUpdateDto>().ReverseMap();
+
+            CreateMap<Services, ServiceGetDto>().ReverseMap();
+            CreateMap<Services, ServiceCreateDto>().ReverseMap();
+            CreateMap<Services, ServiceUpdateDto>().ReverseMap();
+
+
         }
 
     }

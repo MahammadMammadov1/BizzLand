@@ -84,6 +84,16 @@ namespace AllBizz.Business.Service.Implementations
             return slid;
         }
 
+        public async Task SoftDelete(int id)
+        {
+            Slider slider = await _sliderRepository.GetByIdAsync(x => x.Id == id);
+            if (slider != null)
+            {
+                slider.IsDeleted = !slider.IsDeleted;
+                await _sliderRepository.CommitAsync();
+            }
+        }
+
         public async Task Update(SliderUpdateDto slider)
         {
             var slid = await _sliderRepository.GetByIdAsync(x=>x.Id == slider.Id);

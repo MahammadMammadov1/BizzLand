@@ -22,6 +22,11 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<ISliderRepository,SliderRepository>();
 builder.Services.AddScoped<ISliderService,SliderService>();
+
+builder.Services.AddScoped<IServicesService, ServicesService>();
+builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
+
+
 builder.Services.AddAutoMapper(typeof(MapProfile).Assembly);
 
 builder.Services.AddDbContext<AppDbContext>(opt =>

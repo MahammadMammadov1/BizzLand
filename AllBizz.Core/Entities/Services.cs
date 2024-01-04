@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AllBizz.Core.Entities
 {
-    public class Service : BaseEntity
+    public class Services : BaseEntity
     {
         public string LogoUrl { get; set; }
         public string Title { get; set; }
