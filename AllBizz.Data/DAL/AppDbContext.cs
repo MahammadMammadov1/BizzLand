@@ -22,6 +22,8 @@ namespace AllBizz.Data.DAL
         public DbSet<Services> Services { get; set; }
         public DbSet<Member> Members { get; set; }
         public DbSet<Profession> Professions { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Portfolio> Portfolios { get; set; }
 
 
 

@@ -32,6 +32,7 @@ namespace AllBizz.Data.Configurations
             builder.Property(x => x.ImageUrl)
                     .IsRequired()
                     .HasMaxLength(100);
+            builder.HasOne(x => x.Profession).WithMany(p => p.Members);
 
         }
     }
