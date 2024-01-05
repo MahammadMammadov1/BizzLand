@@ -1,6 +1,7 @@
 ﻿using AllBizz.Business.DTOs.ProfessionDtos;
 using AllBizz.Business.DTOs.ServiceDtos;
 using AllBizz.Business.Service.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,7 +18,7 @@ namespace AllBizz.Controllers
             _professionService = professionService;
         }
         [HttpGet]
-        [ProducesResponseType(typeof(int), 200)]
+        [ProducesResponseType(typeof(int), 201)]
 
         public async Task<IActionResult> GetAll()
         {
@@ -26,13 +27,15 @@ namespace AllBizz.Controllers
         }
 
         [HttpGet("{id}")]
-        [ProducesResponseType(typeof(int), 200)]
+        [ProducesResponseType(typeof(int), 201)]
         public async Task<IActionResult> Get(int id)
         {
             var prof = await _professionService.GetByIdAsync(id);
             return Ok(prof);
         }
         [HttpPost]
+        [Authorize(Roles = "SuperAdmin,Admin")]
+
         [ProducesResponseType(typeof(int), 201)]
         public async Task<IActionResult> Create(ProfessionCreateDto dto)
         {
@@ -41,7 +44,9 @@ namespace AllBizz.Controllers
         }
 
         [HttpPut("{id}")]
-        [ProducesResponseType(typeof(int), 200)]
+        [Authorize(Roles = "SuperAdmin,Admin")]
+
+        [ProducesResponseType(typeof(int), 201)]
         public async Task<IActionResult> Update(ProfessionUpdateDto dto)
         {
             await _professionService.Update(dto);
@@ -50,6 +55,8 @@ namespace AllBizz.Controllers
 
 
         [HttpPatch("{id}")]
+        [Authorize(Roles = "SuperAdmin,Admin")]
+
         [ProducesResponseType(typeof(int), 200)]
         public async Task<IActionResult> SoftDelete(int id)
         {
@@ -58,6 +65,7 @@ namespace AllBizz.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "SuperAdmin")]
         [ProducesResponseType(typeof(int), 204)]
         public async Task<IActionResult> Delete(int id)
         {

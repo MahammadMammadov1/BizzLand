@@ -1,5 +1,6 @@
 ﻿using AllBizz.Business.DTOs.PortfolioDtos;
 using AllBizz.Business.Service.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -38,6 +39,9 @@ namespace AllBizz.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "SuperAdmin,Admin")]
+        [ProducesResponseType(typeof(int), 201)]
+        [ProducesResponseType(typeof(int), 404)]
         public async Task<IActionResult> Create([FromForm] PortfolioCreateDto dto)
         {
             try
@@ -47,11 +51,14 @@ namespace AllBizz.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+                return StatusCode(StatusCodes.Status404NotFound, ex.Message);
             }
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "SuperAdmin,Admin")]
+        [ProducesResponseType(typeof(int), 201)]
+        [ProducesResponseType(typeof(int), 404)]
         public async Task<IActionResult> Update(int id, [FromForm] PortfolioUpdateDto dto)
         {
             dto.Id = id;
@@ -62,11 +69,14 @@ namespace AllBizz.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+                return StatusCode(StatusCodes.Status404NotFound, ex.Message);
             }
         }
 
         [HttpPatch("{id}")]
+        [Authorize(Roles = "SuperAdmin,Admin")]
+        [ProducesResponseType(typeof(int), 204)]
+        [ProducesResponseType(typeof(int), 404)]
         public async Task<IActionResult> SoftDelete(int id)
         {
             try
@@ -76,11 +86,14 @@ namespace AllBizz.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+                return StatusCode(StatusCodes.Status404NotFound, ex.Message);
             }
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "SuperAdmin")]
+        [ProducesResponseType(typeof(int), 204)]
+        [ProducesResponseType(typeof(int), 404)]
         public async Task<IActionResult> Delete(int id)
         {
             try
@@ -90,7 +103,7 @@ namespace AllBizz.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+                return StatusCode(StatusCodes.Status404NotFound, ex.Message);
             }
         }
     }

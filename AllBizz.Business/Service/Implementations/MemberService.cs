@@ -32,7 +32,7 @@ namespace AllBizz.Business.Service.Implementations
         public async Task Create(MemberCreateDto dto)
         {
             var newMember = new Member();
-            if (dto.FormFile.FileName != null)
+            if (dto.FormFile != null)
             {
 
                 if (dto.FormFile.ContentType != "image/png" && dto.FormFile.ContentType != "image/jpeg")
@@ -80,7 +80,6 @@ namespace AllBizz.Business.Service.Implementations
                 FaceUrl = x.FaceUrl,
                 InstaUrl = x.InstaUrl,
                 TwitUrl = x.TwitUrl,
-                LinkedinUrl = x.LinkUrl,
                 FullName = x.FullName,
                 ProfessionId = x.ProfessionId,
                 IsDeleted = x.IsDeleted,
@@ -132,7 +131,6 @@ namespace AllBizz.Business.Service.Implementations
 
             member.FullName = dto.FullName;
             member.InstaUrl = dto.InstaUrl;
-            member.LinkUrl = dto.LinkedinUrl;
             member.TwitUrl = dto.TwitUrl;
             member.FaceUrl = dto.FaceUrl;
             member.ProfessionId = dto.ProfessionId;

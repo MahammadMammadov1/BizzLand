@@ -168,3 +168,4 @@ C:\Users\Mehemmed\Desktop\API\AllBizz\AllBizz\obj\Debug\net6.0\refint\AllBizz.dl
 C:\Users\Mehemmed\Desktop\API\AllBizz\AllBizz\obj\Debug\net6.0\AllBizz.pdb
 C:\Users\Mehemmed\Desktop\API\AllBizz\AllBizz\obj\Debug\net6.0\AllBizz.genruntimeconfig.cache
 C:\Users\Mehemmed\Desktop\API\AllBizz\AllBizz\obj\Debug\net6.0\ref\AllBizz.dll
+C:\Users\Mehemmed\Desktop\API\AllBizz\AllBizz\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

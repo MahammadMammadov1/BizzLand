@@ -1,5 +1,6 @@
 ﻿using AllBizz.Business.DTOs.SliderDtos;
 using AllBizz.Business.Service.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,7 +18,7 @@ namespace AllBizz.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType(typeof(int), 200)]
+        [ProducesResponseType(typeof(int), 201)]
 
         public async Task<IActionResult> GetAll()
         {
@@ -33,6 +34,8 @@ namespace AllBizz.Controllers
             return Ok(slider);
         }
         [HttpPost]
+        [Authorize(Roles = "SuperAdmin,Admin")]
+
         [ProducesResponseType(typeof(int), 201)]
         public async Task<IActionResult> Create([FromForm ] SliderCreateDto dto)
         {
@@ -41,7 +44,9 @@ namespace AllBizz.Controllers
         }
 
         [HttpPut("{id}")]
-        [ProducesResponseType(typeof(int), 200)]
+        [Authorize(Roles = "SuperAdmin,Admin")]
+
+        [ProducesResponseType(typeof(int), 201)]
         public async Task<IActionResult> Update([FromForm] SliderUpdateDto dto)
         {
             await _sliderService.Update(dto);
@@ -50,7 +55,9 @@ namespace AllBizz.Controllers
 
 
         [HttpPatch("{id}")]
-        [ProducesResponseType(typeof(int), 200)]
+        [Authorize(Roles = "SuperAdmin,Admin")]
+
+        [ProducesResponseType(typeof(int), 204)]
         public async Task<IActionResult> SoftDelete(int id)
         {
             await _sliderService.SoftDelete(id);
@@ -58,6 +65,8 @@ namespace AllBizz.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "SuperAdmin")]
+
         [ProducesResponseType(typeof(int), 204)]
         public async Task<IActionResult> Delete(int id)
         {

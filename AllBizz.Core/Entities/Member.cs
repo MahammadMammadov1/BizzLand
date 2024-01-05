@@ -14,7 +14,6 @@ namespace AllBizz.Core.Entities
         public string InstaUrl { get; set; }
         public string FaceUrl { get; set; }
         public string TwitUrl { get; set; }
-        public string LinkUrl { get; set; }
         public string ImageUrl { get; set; }
     }
 }

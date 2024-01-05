@@ -20,9 +20,7 @@ namespace AllBizz.Data.Configurations
             builder.Property(x => x.InstaUrl)
                     .IsRequired()
                     .HasMaxLength(50);
-            builder.Property(x => x.LinkUrl)
-                    .IsRequired()
-                    .HasMaxLength(50);
+            
             builder.Property(x => x.TwitUrl)
                     .IsRequired()
                     .HasMaxLength(50);

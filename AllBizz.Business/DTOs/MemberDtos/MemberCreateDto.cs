@@ -16,7 +16,6 @@ namespace AllBizz.Business.DTOs.MemberDtos
         public string InstaUrl { get; set; }
         public string FaceUrl { get; set; }
         public string TwitUrl { get; set; }
-        public string LinkedinUrl { get; set; }
         [NotMapped]
         public IFormFile FormFile { get; set; }
     }
@@ -33,9 +32,7 @@ namespace AllBizz.Business.DTOs.MemberDtos
                 .NotEmpty()
                 .MaximumLength(50);
 
-            RuleFor(x => x.LinkedinUrl)
-                .NotEmpty()
-                .MaximumLength(50);
+            
 
             RuleFor(x => x.TwitUrl)
                 .NotEmpty()

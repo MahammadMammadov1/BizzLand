@@ -2,6 +2,7 @@
 using AllBizz.Business.DTOs.SliderDtos;
 using AllBizz.Business.Service.Implementations;
 using AllBizz.Business.Service.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,7 +19,7 @@ namespace AllBizz.Controllers
             _servicesService = servicesService;
         }
         [HttpGet]
-        [ProducesResponseType(typeof(int), 200)]
+        [ProducesResponseType(typeof(int), 201)]
 
         public async Task<IActionResult> GetAll()
         {
@@ -27,13 +28,15 @@ namespace AllBizz.Controllers
         }
 
         [HttpGet("{id}")]
-        [ProducesResponseType(typeof(int), 200)]
+        [ProducesResponseType(typeof(int), 201)]
         public async Task<IActionResult> Get(int id)
         {
             var service = await _servicesService.GetByIdAsync(id);
             return Ok(service);
         }
         [HttpPost]
+        [Authorize(Roles = "SuperAdmin,Admin")]
+
         [ProducesResponseType(typeof(int), 201)]
         public async Task<IActionResult> Create(ServiceCreateDto dto)
         {
@@ -42,7 +45,9 @@ namespace AllBizz.Controllers
         }
 
         [HttpPut("{id}")]
-        [ProducesResponseType(typeof(int), 200)]
+        [Authorize(Roles = "SuperAdmin,Admin")]
+
+        [ProducesResponseType(typeof(int), 201)]
         public async Task<IActionResult> Update(ServiceUpdateDto dto)
         {
             await _servicesService.Update(dto);
@@ -51,7 +56,9 @@ namespace AllBizz.Controllers
 
 
         [HttpPatch("{id}")]
-        [ProducesResponseType(typeof(int), 200)]
+        [Authorize(Roles = "SuperAdmin,Admin")]
+
+        [ProducesResponseType(typeof(int), 204)]
         public async Task<IActionResult> SoftDelete(int id)
         {
             await _servicesService.SoftDelete(id);
@@ -59,6 +66,7 @@ namespace AllBizz.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "SuperAdmin")]
         [ProducesResponseType(typeof(int), 204)]
         public async Task<IActionResult> Delete(int id)
         {

@@ -13,7 +13,6 @@ namespace AllBizz.Business.DTOs.MemberDtos
         public string ImageUrl { get; set; }
         public int ProfessionId { get; set; }
         public string InstaUrl { get; set; }
-        public string LinkedinUrl { get; set; }
         public string FaceUrl { get; set; }
         public string TwitUrl { get; set; }
         public bool IsDeleted { get; set; }

@@ -1,7 +1,9 @@
-﻿using AllBizz.Business.DTOs.CategoryDtos;
+﻿using AllBizz.Business.DTOs.AccountDtos;
+using AllBizz.Business.DTOs.CategoryDtos;
 using AllBizz.Business.DTOs.MemberDtos;
 using AllBizz.Business.DTOs.PortfolioDtos;
 using AllBizz.Business.DTOs.ProfessionDtos;
+using AllBizz.Business.DTOs.RegisterDtos;
 using AllBizz.Business.DTOs.ServiceDtos;
 using AllBizz.Business.DTOs.SliderDtos;
 using AllBizz.Core.Entities;
@@ -41,6 +43,10 @@ namespace AllBizz.Business.MappingProfile
             CreateMap<PortfolioCreateDto, Portfolio>().ReverseMap();
             CreateMap<PortfolioGetDto, Portfolio>().ReverseMap();
             CreateMap<PortfolioUpdateDto, Portfolio>().ReverseMap();
+
+            CreateMap<RegisterDto,AppUser>().ReverseMap();
+            CreateMap<LoginDto,AppUser>().ReverseMap();
+
         }
 
     }
