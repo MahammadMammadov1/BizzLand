@@ -39,7 +39,7 @@ namespace AllBizz.Api.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "SuperAdmin,Admin")]
+        //[Authorize(Roles = "SuperAdmin,Admin")]
         [ProducesResponseType(typeof(int), 201)]
         public async Task<IActionResult> Create([FromForm] MemberCreateDto dto)
         {
@@ -50,7 +50,7 @@ namespace AllBizz.Api.Controllers
         }
 
         [HttpPut("{id}")]
-        [Authorize(Roles = "SuperAdmin,Admin")]
+        //[Authorize(Roles = "SuperAdmin,Admin")]
         [ProducesResponseType(typeof(int), 201)]
         [ProducesResponseType(typeof(int), 404)]
         public async Task<IActionResult> Update( [FromForm] MemberUpdateDto dto)
@@ -68,7 +68,7 @@ namespace AllBizz.Api.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Roles = "SuperAdmin")]
+        //[Authorize(Roles = "SuperAdmin")]
         [ProducesResponseType(typeof(int), 201)]
         [ProducesResponseType(typeof(int), 404)]
         public async Task<ActionResult> Delete(int id)
@@ -85,7 +85,7 @@ namespace AllBizz.Api.Controllers
         }
 
         [HttpPatch("{id}")]
-        [Authorize(Roles ="SuperAdmin,Admin")]
+        //[Authorize(Roles ="SuperAdmin,Admin")]
         [ProducesResponseType(typeof(int), 201)]
         [ProducesResponseType(typeof(int), 404)]
         public async Task<ActionResult> SoftDelete(int id)

@@ -43,7 +43,7 @@ namespace AllBizz.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "SuperAdmin,Admin")]
+        //[Authorize(Roles = "SuperAdmin,Admin")]
         [ProducesResponseType(typeof(int), 201)]
         [ProducesResponseType(typeof(int), 404)]
 
@@ -61,7 +61,7 @@ namespace AllBizz.Controllers
         }
 
         [HttpPut("{id}")]
-        [Authorize(Roles = "SuperAdmin,Admin")]
+        //[Authorize(Roles = "SuperAdmin,Admin")]
         [ProducesResponseType(typeof(int), 201)]
         [ProducesResponseType(typeof(int), 404)]
         public async Task<IActionResult> Update( CategoryUpdateDto dto)
@@ -79,7 +79,7 @@ namespace AllBizz.Controllers
         }
 
         [HttpPatch("{id}")]
-        [Authorize(Roles = "SuperAdmin,Admin")]
+        //[Authorize(Roles = "SuperAdmin,Admin")]
         [ProducesResponseType(typeof(int), 204)]
         [ProducesResponseType(typeof(int), 404)]
         public async Task<IActionResult> SoftDelete(int id)
@@ -96,7 +96,7 @@ namespace AllBizz.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Roles = "SuperAdmin")]
+        //[Authorize(Roles = "SuperAdmin")]
         [ProducesResponseType(typeof(int), 204)]
         [ProducesResponseType(typeof(int), 404)]
         public async Task<IActionResult> Delete(int id)

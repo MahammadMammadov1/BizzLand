@@ -78,6 +78,7 @@ namespace AllBizz.Business.Service.Implementations
             var mb = members.Select(x => new MemberGetDto()
             {
                 FaceUrl = x.FaceUrl,
+                ImageUrl = x.ImageUrl,
                 InstaUrl = x.InstaUrl,
                 TwitUrl = x.TwitUrl,
                 FullName = x.FullName,
